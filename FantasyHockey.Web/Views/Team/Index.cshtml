@@ -1,0 +1,52 @@
+﻿@model  List<FantasyHockey.Web.Models.TeamViewModel>
+
+@{
+    ViewBag.Title = "Team Index";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="row">
+        <h4 class="col-md-3">LOCATION</h4>
+        <h4 class="col-md-3">NAME</h4>
+        <h4 class="col-md-3">DIVISION</h4>
+        <h4 class="col-md-2">CONFERENCE</h4>
+        <h4 class="col-md-1">ACTIONS</h4>
+    </div>
+
+    <div class="row margin-bottom-50">
+        @if (Model.Any())
+        {
+            foreach (var team in Model)
+            {
+                <div class="height-30">
+                    <div class="col-md-3">
+                        @team.Location
+                    </div>
+                    <div class="col-md-3">
+                        @team.Name
+                    </div>
+                    <div class="col-md-3">
+                        @team.Division
+                    </div>
+                    <div class="col-md-2">
+                        @team.Conference
+                    </div>
+                    <div class="col-md-1">
+                        <a href="@Url.Action("Edit", "Team", new {id = team.TeamId})"><i class="fa fa-lg fa-pencil"></i></a>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-md-3">There are currently no availabe teams</div>
+        }
+    </div>
+    <div class="row">
+        <a class="btn btn-large btn-primary col-md-2" href="@Url.Action("Create")">
+            <i class="fa fa-lg fa-plus"></i>&nbsp; Team
+        </a>
+    </div>
+</div>

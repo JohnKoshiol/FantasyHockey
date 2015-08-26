@@ -1,0 +1,16 @@
+WHAT:
+	Build a fantasy hockey website in both JavaScript - Then convert it to Angular
+
+FEATURES:
+	Save to DB
+	Save to RavenDB
+	One minute auto logout feature if user doesn't do anything
+	Responsive design
+	
+AREAS OF FOCUS:
+	Unit tests
+	HTML
+	CSS
+	JavaScript
+	Angular
+	

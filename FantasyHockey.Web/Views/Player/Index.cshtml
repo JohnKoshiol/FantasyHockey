@@ -1,0 +1,83 @@
+﻿@using FantasyHockey.Data.Enums
+@model IEnumerable<FantasyHockey.Web.Models.PlayerViewModel>
+
+@{
+    ViewBag.Title = "Player Index";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="row">
+        <h4 class="col-md-2">NAME</h4>
+        <h4 class="col-md-2">TEAM</h4>
+        <h4 class="col-md-1">STATUS</h4>
+        <h4 class="col-md-1">GOALS</h4>
+        <h4 class="col-md-1">ASSISTS</h4>
+        <h4 class="col-md-1">PPG</h4>
+        <h4 class="col-md-1">RECORD</h4>
+        <h4 class="col-md-1">GAA</h4>
+        <h4 class="col-md-1">SAVE%</h4>
+        <h4 class="col-md-1"></h4>
+    </div>
+
+    <div class="row margin-bottom-50">
+        @if (Model.Any(p => p.Status != Status.Unavailable))
+        {
+            foreach (var player in Model)
+            {
+                <div class="height-30">
+                    @Html.HiddenFor(model => player.PlayerId)
+                    <div class="col-md-2">
+                        @player.FullName
+                    </div>
+                    <div class="col-md-2">
+                        @player.FullTeamName
+                    </div>
+                    <div class="col-md-1">
+                        @player.Status
+                    </div>
+                    <div class="col-md-1">
+                        @(player.Goals ?? default(int))
+                    </div>
+                    <div class="col-md-1">
+                        @(player.Assists ?? default(int))
+                    </div>
+                    <div class="col-md-1">
+                        @(player.PointsPerGame ?? default(int))
+                    </div>
+                    <div class="col-md-1">
+                        @(player.Record)
+                    </div>
+                    <div class="col-md-1">
+                        @(player.GoalsAgainstAverage ?? default(int))
+                    </div>
+                    <div class="col-md-1">
+                        @(player.SavePercentage ?? default(int))
+                    </div>
+                    <div class="col-md-1">
+                        <a href="@Url.Action("Edit", "Player", new {id = player.PlayerId})"><i class="fa fa-lg fa-pencil"></i></a>
+                    </div>
+
+                    @*  Keep this around in case I want to display salary lower when clicking "More Info" or something
+                        <div class="col-md-1">
+                            @player.Salary
+                        </div>
+                    *@
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-md-3">
+                There are currently no available players.
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        <a class="btn btn-large btn-primary col-md-2" href="@Url.Action("Create")">
+            <i class="fa fa-lg fa-plus"></i>&nbsp; <strong>PLAYER</strong>
+        </a>
+    </div>
+</div>

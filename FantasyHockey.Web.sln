@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyHockey.Web", "FantasyHockey.Web\FantasyHockey.Web.csproj", "{5CCA149B-7700-441C-9FF9-9994275E9AA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyHockey.Services", "FantasyHockey.Services\FantasyHockey.Services.csproj", "{A5F8AAF0-8775-4AE6-8816-3D27264D7458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyHockey.Data", "FantasyHockey.Data\FantasyHockey.Data.csproj", "{0D0A06A5-2FCC-49B9-BEA6-6179337C2C6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyHockey.Tests", "FantasyHockey.Tests\FantasyHockey.Tests.csproj", "{B1C9C6C2-6299-4EDA-B24D-FDDE7956688D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5E4DE2E5-71E8-4C7B-9187-C33767A340AD}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CCA149B-7700-441C-9FF9-9994275E9AA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CCA149B-7700-441C-9FF9-9994275E9AA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CCA149B-7700-441C-9FF9-9994275E9AA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CCA149B-7700-441C-9FF9-9994275E9AA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F8AAF0-8775-4AE6-8816-3D27264D7458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F8AAF0-8775-4AE6-8816-3D27264D7458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F8AAF0-8775-4AE6-8816-3D27264D7458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F8AAF0-8775-4AE6-8816-3D27264D7458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D0A06A5-2FCC-49B9-BEA6-6179337C2C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D0A06A5-2FCC-49B9-BEA6-6179337C2C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D0A06A5-2FCC-49B9-BEA6-6179337C2C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D0A06A5-2FCC-49B9-BEA6-6179337C2C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1C9C6C2-6299-4EDA-B24D-FDDE7956688D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1C9C6C2-6299-4EDA-B24D-FDDE7956688D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1C9C6C2-6299-4EDA-B24D-FDDE7956688D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1C9C6C2-6299-4EDA-B24D-FDDE7956688D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

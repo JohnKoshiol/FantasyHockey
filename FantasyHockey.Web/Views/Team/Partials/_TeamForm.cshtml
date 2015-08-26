@@ -1,0 +1,46 @@
+﻿@model FantasyHockey.Web.Models.TeamViewModel
+
+<div class="container">
+    <div class="row">
+        @Html.HiddenFor(model => model.TeamId)
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.Location)
+            @Html.TextBoxFor(model => model.Location, new {@class = "form-control"})
+            <div>
+                @Html.ValidationMessageFor(model => model.Location)
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new {@class = "form-control"})
+            <div>
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.Division)
+            @Html.TextBoxFor(model => model.Division, new { @class = "form-control" })
+            <div>@Html.ValidationMessageFor(model => model.Division)</div>
+        </div>
+        <div class="form-group col-md-4">
+            @Html.LabelFor(model => model.Conference)
+            @Html.TextBoxFor(model => model.Conference, new { @class = "form-control" })
+            <div>
+                @Html.ValidationMessageFor(model => model.Conference)
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="margin-top-20">
+            <button type="submit" name="submit" value="submit" class="btn btn-large btn-success col-md-2">Submit</button>
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-large btn-danger col-md-2 button-settings" })
+            <button type="submit" name="submit" value="delete" class="btn btn-large btn-warning col-md-2 pull-right margin-right-30">Delete</button>
+        </div>
+    </div>
+    <div class="row">
+        @Html.ValidationSummary(true);
+    </div>
+</div>

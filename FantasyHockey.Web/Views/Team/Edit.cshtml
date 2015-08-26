@@ -1,0 +1,10 @@
+﻿@model FantasyHockey.Web.Models.TeamViewModel
+
+<div class="page-header">
+    <h2>Edit @Model.Location @Model.Name</h2>
+</div>
+
+@using (@Html.BeginForm("Edit", "Team", FormMethod.Post))
+{
+    @Html.Partial("Partials/_TeamForm", Model)
+}
